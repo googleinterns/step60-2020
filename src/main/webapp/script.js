@@ -11,3 +11,28 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+/**
+ * Fetch and add comments to the page.
+ */
+function getComments() {
+  fetch('/data').then(response=>response.json()).then((data)=> {
+      const comments = document.getElementById('data-container');
+      comments.innerHTML = '';
+      
+      // Display the maximum number of comments
+      for (let i = 0; i < data.length; i++) {
+          // Format i comments in a list and display to the webpage.
+          if (data[i] != "") {
+              comments.appendChild(createListElement(data[i]));
+            }
+        }
+    });
+}
+
+/** Create an <li> element containing text.*/
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
+}
