@@ -32,7 +32,7 @@ import java.util.Arrays;
 
 /** Servlet that returns comments*/
 @WebServlet("/data")
-public class DataServlet extends HttpServlet {
+public class CommentServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
