@@ -5,6 +5,8 @@
     <title>Capstone Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
@@ -23,6 +25,20 @@
       <br/><br/>
       <input type="Submit"/>
       </form>
+      <h1>Things to do at College</h1>
+         <div id="chart-container"></div>
+         <h2>Vote</h2>
+         <form action="/voter-data" method="POST">
+            <select name="hobby">
+               <option value="Study">Study</option>
+               <option value="Read">Read</option>
+               <option value="Party">Party</option>
+               <option value="Eat">Eat</option>
+               <option value="Class">Class</option>
+               <option value="Other">Other</option>
+            </select>
+            <button>Submit</button>
+         </form>
     </div>
   </body>
 </html>
