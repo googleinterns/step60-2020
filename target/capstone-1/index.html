@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Capstone Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload=getComments()>
+    <div id="content">
+      <h1>Capstone Project</h1>
+
+      <br>
+
+      <h3>Helpful Videos</h3>
+      <p>We added these videos to give students advice on college life!</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SDeUCF543bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br><br>
+
+      <h3>Blog Posts</h3>
+      <p>Here are some posts from past students with college advice!</p>
+      <div id="data-container"></div>
+      
+      <br>   
+      <form action="/data" method="POST">
+      <p>Please leave your name! </p>
+      <input type="text" name="user-comments">
+      <br/><br/>
+      <input type="Submit"/>
+      </form>
+    </div>
+  </body>
+</html>
