@@ -5,12 +5,12 @@
         "args": [
             "build",
             "-t",
-            "gcr.io/$PROJECT_ID/quickstart-image",
+            "gcr.io/team60-step-2020/quickstart-image",
             "."
         ]
     }],
 
     "images":[ 
-        "gcr.io/$PROJECT_ID/quickstart-image" 
+        "gcr.io/team60-step-2020/quickstart-image" 
     ]
 }
