@@ -7,10 +7,10 @@
             "-t",
             "gcr.io/$PROJECT_ID/quickstart-image",
             "."
-        ],
-        "images": [
-            "gcr.io/$PROJECT_ID/quickstart-image"
         ]
-    }
+    }],
+
+    "images":[ 
+        "gcr.io/$PROJECT_ID/quickstart-image" 
     ]
 }
