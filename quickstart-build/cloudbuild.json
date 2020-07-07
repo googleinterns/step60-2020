@@ -8,6 +8,7 @@
             "gcr.io/team60-step-2020/quickstart-image",
             "quickstart-build"
         ]
+        
     }],
 
     "images":[ 
