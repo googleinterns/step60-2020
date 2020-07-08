@@ -19,8 +19,7 @@
         "gcr.io/team60-step-2020/mvn",
         "quickstart-build"
       ]
-    }
-    ],
+    }],
 
     "images":[ 
         "gcr.io/team60-step-2020/quickstart-image" 
