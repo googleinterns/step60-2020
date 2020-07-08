@@ -15,6 +15,7 @@
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "build",
+        "-t",
         "gcr.io/team60-step-2020/mvn",
         "quickstart-build"
       ]
