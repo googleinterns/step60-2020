@@ -12,7 +12,7 @@
 
     # Build the latest version.
     {
-      "name": "gcr.io/cloud-builders/docker"
+      "name": "gcr.io/cloud-builders/docker",
       "args": [
         "build",
         "gcr.io/team60-step-2020/mvn",
