@@ -51,7 +51,7 @@ function drawChart() {
     });
 
     const options = {
-      'title': 'Things College Students Do',
+      'title': 'Ways College Students Spend Time',
       'width':600,
       'height':500
     };
