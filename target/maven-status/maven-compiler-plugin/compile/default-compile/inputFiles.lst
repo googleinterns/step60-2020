@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/charlottehank/step60-2020/src/main/java/com/google/sps/servlets/CommentServlet.java
 =======
 /home/ehiggs/step60-2020/src/main/java/com/google/sps/servlets/CommentServlet.java
 /home/ehiggs/step60-2020/src/main/java/com/google/sps/servlets/VoteDataServlet.java
 >>>>>>> Add target files?
+=======
+/home/ehiggs/step60-2020/src/main/java/com/google/sps/servlets/CommentServlet.java
+/home/ehiggs/step60-2020/src/main/java/com/google/sps/servlets/VoteDataServlet.java
+>>>>>>> f72ac4919757998e78007964e50aca2f1ea3ba4d
