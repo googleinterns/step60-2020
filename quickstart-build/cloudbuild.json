@@ -1,14 +1,25 @@
 {
     "steps": [
     {
-        "name": "gcr.io/cloud-builders/docker",
-        "args": [
-            "build",
-            "-t",
-            "gcr.io/team60-step-2020/quickstart-image",
-            "quickstart-build"
-        ]
-    }],
+      "name": "gcr.io/cloud-builders/docker",
+      "args": [
+        "build",
+        "-t",
+        "gcr.io/team60-step-2020/quickstart-image",
+        "quickstart-build"
+       ]
+    },
+
+    # Build the latest version.
+    {
+      "name": "gcr.io/cloud-builders/docker"
+      "args": [
+        "build",
+        "gcr.io/team60-step-2020/mvn",
+        "quickstart-build"
+      ]
+    }
+    ],
 
     "images":[ 
         "gcr.io/team60-step-2020/quickstart-image" 
