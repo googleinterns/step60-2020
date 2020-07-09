@@ -5,6 +5,8 @@
     <title>Capstone Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
   </head>
   <body onload=getComments()>
     <div id="content">
@@ -28,6 +30,13 @@
       <input type="text" name="user-comments">
       <br/><br/>
       <input type="Submit"/>
+      </form>
+      <h4>Here are some ways college students like to spend their time!</h4>
+      <div id="chart-container"></div>
+      <p>Enter how you like to spend time at school</p>
+      <form action="/voter-data" method="POST">
+          <input type="text" name="hobby">
+          <input type="Submit"/>
       </form>
     </div>
   </body>
