@@ -36,3 +36,28 @@ function createListElement(text) {
     liElement.innerText = text;
     return liElement;
 }
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+/** Fetches vote data and uses it to create a chart. */
+function drawChart() {
+  fetch('/voter-data').then(response => response.json())
+  .then((votes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Hobby');
+    data.addColumn('number', 'Votes');
+    Object.keys(votes).forEach((hobby) => {
+      data.addRow([hobby, votes[hobby]]);
+    });
+
+    const options = {
+      'title': 'Ways College Students Spend Time',
+      'width':600,
+      'height':500
+    };
+
+    const chart = new google.visualization.PieChart(
+        document.getElementById('chart-container'));
+    chart.draw(data, options);
+  });
+}
