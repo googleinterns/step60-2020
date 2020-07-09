@@ -10,7 +10,6 @@
        ]
     },
 
-    # Build the latest version.
     {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
