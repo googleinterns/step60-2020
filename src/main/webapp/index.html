@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <div class="header">
+
+  <head>
     <meta charset="UTF-8">
-    <h2>Capstone Project</h2>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+
+  <div class="header">
+    <h2>Capstone Project</h2>
   </div>
 
-<body onload=getComments()>
+<body onload="getComments();drawChart()">
   <div class="row">
     <div class="leftcolumn">
 
@@ -35,6 +38,13 @@
       <div class="card">
         <h2>Student Data Graphs</h2>
         <h5>Here are some ways college students like to spend their time!</h5>
+
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+          google.charts.load('current', {packages: ['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        </script>
+
         <div id="chart-container"></div>
       
         <p>Enter how you like to spend time at school</p>
