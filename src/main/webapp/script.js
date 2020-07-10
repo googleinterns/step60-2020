@@ -32,7 +32,7 @@ function getComments() {
 
 /** Create an <li> element containing text.*/
 function createListElement(text) {
-    const liElement = document.createElement('li');
+    const liElement = document.createElement('p');
     liElement.innerText = text;
     return liElement;
 }
