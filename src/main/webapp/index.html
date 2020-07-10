@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <div class="header">
     <meta charset="UTF-8">
-    <title>Capstone Project</title>
+    <h2>Capstone Project</h2>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body onload=getComments()>
-    <div id="content">
-      <h1>Capstone Project</h1>
+  </div>
 
-      <br>
+<body onload=getComments()>
+  <div class="row">
+    <div class="leftcolumn">
 
-      <h3>Helpful Videos</h3>
-      <p>We added these videos to give students advice on college life!</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SDeUCF543bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="card">
+        <h2>Helpful Videos</h2>
+        <h5>We added these videos to give students advice on college life!</h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SDeUCF543bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
-      <br><br><br>
-
-      <h3>Blog Posts</h3>
-      <p>Here are some posts from past students with college advice!</p>
-      <div id="data-container"></div>
+      <div class="card">
+        <h2>Blog Posts</h2>
+        <h5>Here are some posts from past students with college advice!</h5>
+        <div id="data-container"></div>
       
-      <br>   
-      <form action="/data" method="POST">
-      <p>Please leave your name! </p>
-      <input type="text" name="user-comments">
-      <br/><br/>
-      <input type="Submit"/>
-      </form>
-      <h4>Here are some ways college students like to spend their time!</h4>
-      <div id="chart-container"></div>
-      <p>Enter how you like to spend time at school</p>
-      <form action="/voter-data" method="POST">
+        <br>   
+        <form action="/data" method="POST">
+          <p>Please leave your name! </p>
+          <input type="text" name="user-comments" id="user-comments">
+          <br/><br/>
+          <input type="Submit"/>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Student Data Graphs</h2>
+        <h5>Here are some ways college students like to spend their time!</h5>
+        <div id="chart-container"></div>
+      
+        <p>Enter how you like to spend time at school</p>
+        <form action="/voter-data" method="POST">
           <input type="text" name="hobby">
           <input type="Submit"/>
-      </form>
+        </form>
+      </div>
+
     </div>
-  </body>
 </html>
