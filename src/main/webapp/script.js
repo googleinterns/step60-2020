@@ -36,6 +36,7 @@ function createListElement(text) {
     liElement.innerText = text;
     return liElement;
 }
+
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
