@@ -18,7 +18,7 @@ body {
 
 .leftcolumn {
   float: left;
-  width: 75%;
+  width: 50%;
 }
 
 /* Add a card effect for articles */
@@ -33,4 +33,10 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 40%;
 }
