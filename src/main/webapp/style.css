@@ -8,7 +8,6 @@ body {
     height:40px;
 }
 
-/* Header Title */
 .header {
   padding: 30px;
   font-size: 40px;
@@ -21,7 +20,7 @@ body {
   width: 50%;
 }
 
-/* Add a card effect for articles */
+/* Add a card effect for each feature */
 .card {
   background-color: azure;
   padding: 20px;
@@ -35,7 +34,6 @@ body {
   clear: both;
 }
 
-/* Right column */
 .rightcolumn {
   float: right;
   width: 40%;
