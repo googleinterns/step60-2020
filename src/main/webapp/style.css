@@ -9,15 +9,15 @@ body {
 }
 
 .header {
-  padding: 30px;
-  font-size: 40px;
+  padding: 10px;
+  font-size: 50px;
   text-align: center;
   background: azure;
 }
 
 .leftcolumn {
   float: left;
-  width: 50%;
+  width: 55%;
 }
 
 /* Add a card effect for each feature */
