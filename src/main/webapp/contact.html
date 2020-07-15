@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="polls.html">Polls</a> 
+</nav>
+  <div class="header">
+    <h2>Capstone Project</h2>
+  </div>
+
+<body onload="getComments();drawChart()">
+  <div class="row">
+    <div class="leftcolumn">
+
+      <div class="card">
+        <h2>Helpful Videos</h2>
+        <h5>We added these videos to give students advice on college life!</h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SDeUCF543bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <h2>Blog Posts</h2>
+        <h5>Here are some posts from past students with college advice!</h5>
+        <div id="data-container"></div>
+      
+        <br>   
+        <form action="/data" method="POST">
+          <p>Please leave your name! </p>
+          <input type="text" name="user-comments" id="user-comments">
+          <br/><br/>
+          <input type="Submit"/>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Student Data Graphs</h2>
+        <h5>Here are some ways college students like to spend their time!</h5>
+
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+          google.charts.load('current', {packages: ['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        </script>
+
+        <div id="chart-container"></div>
+      
+        <p>Enter how you like to spend time at school</p>
+        <form action="/voter-data" method="POST">
+          <input type="text" name="hobby">
+          <input type="Submit"/>
+        </form>
+      </div>
+
+    </div>
+</html>
