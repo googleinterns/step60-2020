@@ -1,7 +1,8 @@
 body {
-  font-family: Arial;
-  background-color: rgba(8, 216, 181,0.178);
+  font-family: Trebuchet;
+  background-color: rgba(10, 184, 155, 0.253);
   padding: 20px;
+  text-align: center;
 }
 
 #user-comments{
@@ -10,7 +11,6 @@ body {
 
 .header {
   padding: 10px;
-  font-size: 50px;
   text-align: center;
   background: azure;
 }
@@ -37,4 +37,36 @@ body {
 .rightcolumn {
   float: right;
   width: 40%;
+}
+
+.nav_bar{
+  margin: auto;
+  padding: 5px 20px 5px 20px;
+  background: #cccccc;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: 60px;
+}
+
+.nav_bar a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav_bar a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+h1{
+  font-size: 70px;
+  line-height: .8;
+  font-weight: bolder;
+}
+
+h4{
+  font-size: 25px;
+  line-height: .5;
+  font-weight: normal;
 }
