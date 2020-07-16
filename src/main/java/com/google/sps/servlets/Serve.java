@@ -39,27 +39,4 @@ public class Serve extends HttpServlet {
 }
  
  
-/**
- * This servlet prints out the HTML for the homepage. You wouldn't do this in a real codebase, but
- * this is meant to demonstrate getting a Blobstore URL and using it in a form to allow a user to
- * upload a file.
- 
-@WebServlet("/home")
-public class HomeServlet extends HttpServlet {
- 
-  /**
-   * Returns HTML that contains a form. The form submits to Blobstore, which redirects to our
-   * /my-form-handler, which is handled by FormHandlerServlet.
-   
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
- 
-    // Get the Blobstore URL
-    BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
-    String uploadUrl = blobstoreService.createUploadUrl("/img-data");
- 
-    response.setContentType("text/html");
-  }
-}
- 
-*/
+
