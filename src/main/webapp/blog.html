@@ -12,11 +12,26 @@
       <h4>By college students, for college students</h4>
     </div>
     <div class = "nav_bar">
-      <a href="index.html">Home</a>
-      <a href="videos.html">Videos</a>
-      <a href="blog.html">Blog</a>
-      <a href="polls.html">Polls</a> 
-      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a> |
+      <a href="videos.html">Videos</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="polls.html">Polls</a> |
+      <a href="contact.html">Contact</a> 
+    </div>
+    <div class="card">
+        <h3>Blog Posts</h3>
+        <p>Here are some posts from past students with college advice!<p>
+        <div id="data-container"></div>
+    </div>
+    <div class="card">
+        <h3>Leave a blog post!</h3>
+        <p>Upcoming students would love to hear from you!<p>  
+        <form action="/data" method="POST">
+        <p>Please leave your name! </p>
+        <input type="text" name="user-comments" id="user-comments">
+        <br/><br/>
+        <input type="Submit"/>
+        </form>
     </div>
   </body>
 </html>
