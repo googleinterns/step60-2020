@@ -70,3 +70,8 @@ h4{
   line-height: .5;
   font-weight: normal;
 }
+
+h3{
+    font-size: 25px;
+    text-align: center;
+}
