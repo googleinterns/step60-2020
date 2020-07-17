@@ -23,16 +23,33 @@ function getComments() {
       // Display the maximum number of comments
       for (let i = 0; i < data.length; i++) {
           // Format i comments in a list and display to the webpage.
-          if (data[i] != "") {
-              comments.appendChild(createListElement(data[i]));
-            }
+          if(i%3 == 0)
+          {
+            //bold only the names with each comment
+            comments.appendChild(createBoldElement(data[i]));
+          }
+          else if (data[i] != "") {
+            comments.appendChild(createListElement(data[i]));
+          }
+          //Add a space between every comment
+          if((i+1)%3 == 0 && i > 0)
+          {
+            comments.appendChild(createListElement("\n"));
+          }
         }
     });
 }
 
-/** Create an <li> element containing text.*/
+/** Create an paragraph element containing text.*/
 function createListElement(text) {
     const liElement = document.createElement('p');
+    liElement.innerText = text;
+    return liElement;
+}
+
+/** Create an bold element containing text.*/
+function createBoldElement(text) {
+    const liElement = document.createElement('h5');
     liElement.innerText = text;
     return liElement;
 }
