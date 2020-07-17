@@ -26,18 +26,19 @@
     <div class="card">
         <h3>Leave a blog post!</h3>
         <p>Upcoming students would love to hear from you!<p>  
-        <form action="/data" method="POST" id="commentForm">
-          <label for="comment_author" class="required">Your name</label>
-          <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-          <label for="email" class="required">Your email;</label>
-          <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-          <label for="comment" class="required">Your message</label>
-          <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
-
-          <input type="Submit"/>
+        <div id="respond">
+          <form action="/data" method="POST" id="commentForm">
+            <label for="comment_author" class="required">Your name:</label>
+            <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+            <br>
+            <label for="email" class="required">Your email:</label>
+            <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+            <br>
+            <label for="comment" class="required">Your message:</label>
+            <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+            <input type="Submit"/>
           </form>
+        </div>
     </div>
 
 </div>
