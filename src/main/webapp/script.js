@@ -25,13 +25,13 @@ function getComments() {
           // Format i comments in a list and display to the webpage.
           if(i%3 == 0)
           {
-            //bold only the names with each comment
+            // Bold only the names with each comment
             comments.appendChild(createBoldElement(data[i]));
           }
           else if (data[i] != "") {
             comments.appendChild(createListElement(data[i]));
           }
-          //Add a space between every comment
+          // Add a space between every comment
           if((i+1)%3 == 0 && i > 0)
           {
             comments.appendChild(createListElement("\n"));
