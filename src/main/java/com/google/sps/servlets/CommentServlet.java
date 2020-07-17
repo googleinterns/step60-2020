@@ -44,8 +44,12 @@ public class CommentServlet extends HttpServlet {
     // Populate comments with titles from Datastore.
     ArrayList<String> comments = new ArrayList<String>();
     for (Entity entity : results.asIterable()) {
-      String title = (String) entity.getProperty("user-comments");
-      comments.add(title);
+      String author = (String) entity.getProperty("comment_author");
+      String email = (String) entity.getProperty("email");
+      String comment = (String) entity.getProperty("comment");
+      comments.add(author);
+      comments.add(email);
+      comments.add(comment);
     }
 
     response.setContentType("application/json;");
@@ -56,18 +60,22 @@ public class CommentServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String userComment = request.getParameter("user-comments");
+    String author = request.getParameter("comment_author");
+    String email = request.getParameter("email");
+    String userComment = request.getParameter("comment"); 
 
     // Create entity with comment property to store user comments.
     Entity taskEntity = new Entity("Comments");
-    taskEntity.setProperty("user-comments", userComment);
+    taskEntity.setProperty("comment_author", author);
+    taskEntity.setProperty("email", email);
+    taskEntity.setProperty("comment", userComment);
 
     // Add comments to the Datastore for longterm storage. 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(taskEntity);
 
     // Send the user back to the index page after adding a comment.
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/blog.html");
   }
 }
 
