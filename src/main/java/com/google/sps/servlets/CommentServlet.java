@@ -74,7 +74,7 @@ public class CommentServlet extends HttpServlet {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(taskEntity);
 
-    // Send the user back to the index page after adding a comment.
+    // Send the user back to the blog page after adding a comment.
     response.sendRedirect("/blog.html");
   }
 }
