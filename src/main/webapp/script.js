@@ -25,7 +25,9 @@ function getComments() {
           // Format i comments in a list and display to the webpage.
           if(i%3 == 0) {
             // Add a space between every comment
-            comments.appendChild(createListElement("\n"));
+            if (i != 0) {
+              comments.appendChild(createListElement("\n"));
+            }
             // Bold only the names with each comment
             comments.appendChild(createBoldElement(data[i]));
           }
