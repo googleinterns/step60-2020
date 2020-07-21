@@ -23,7 +23,7 @@ function getComments() {
     // Display the maximum number of comments
     for (let i = 0; i < data.length; i++) {
       // Print to the page if the current value is not empty.
-      if(data[i] != null && data[i].length > 0){
+      if (data[i] != null && data[i].length > 0) {
         // Format the three comment fields in a list and print to the page.
         // Add a new line and then bold the first field in the following comment. 
         if (i%3 == 0) {
