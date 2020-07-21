@@ -40,16 +40,16 @@ function getComments() {
 
 /** Create a <li> element containing text.*/
 function createListElement(text) {
-    const liElement = document.createElement('p');
-    liElement.innerText = text;
-    return liElement;
+  const liElement = document.createElement('p');
+  liElement.innerText = text;
+  return liElement;
 }
 
 /** Create a bold element containing text.*/
 function createBoldElement(text) {
-    const liElement = document.createElement('h5');
-    liElement.innerText = text;
-    return liElement;
+  const liElement = document.createElement('h5');
+  liElement.innerText = text;
+  return liElement;
 }
 
 google.charts.load('current', {'packages':['corechart']});
