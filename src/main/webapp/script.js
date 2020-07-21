@@ -22,11 +22,19 @@ function getComments() {
       
       // Display the maximum number of comments
       for (let i = 0; i < data.length; i++) {
-          // Format i comments in a list and display to the webpage.
-          if (data[i] != "") {
-              comments.appendChild(createListElement(data[i]));
-            }
+        // Format i comments in a list and display to the webpage.
+        if(i%3 == 0) {
+          // Add a return between every comment
+          if (i != 0) {
+            comments.appendChild(createListElement("\n"));
+          }
+          // Bold only the names with each comment
+          comments.appendChild(createBoldElement(data[i]));
+          }
+        else if (data[i] != "") {
+          comments.appendChild(createListElement(data[i]));
         }
+      }
     });
 }
 
