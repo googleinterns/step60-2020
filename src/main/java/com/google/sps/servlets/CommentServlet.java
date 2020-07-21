@@ -68,7 +68,7 @@ public class CommentServlet extends HttpServlet {
     Entity taskEntity = new Entity("Comments");
     taskEntity.setProperty("comment_author", author);
     taskEntity.setProperty("email", email);
-    taskEntity.setProperty("comment", comment);
+    taskEntity.setProperty("comment", userComment);
 
     // Add comments to the Datastore for longterm storage. 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
