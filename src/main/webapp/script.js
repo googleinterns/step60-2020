@@ -38,9 +38,16 @@ function getComments() {
     });
 }
 
-/** Create an <li> element containing text.*/
+/** Create a <li> element containing text.*/
 function createListElement(text) {
     const liElement = document.createElement('p');
+    liElement.innerText = text;
+    return liElement;
+}
+
+/** Create a bold element containing text.*/
+function createBoldElement(text) {
+    const liElement = document.createElement('h5');
     liElement.innerText = text;
     return liElement;
 }
