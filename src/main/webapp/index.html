@@ -25,22 +25,6 @@
           <p>We added these videos to give students advice on college life!<p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/SDeUCF543bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="card">
-          <h3>Student Data Graphs</h3>
-          <p>Here are ways college students like to spend their time!</p>
-          <script src="https://www.gstatic.com/charts/loader.js"></script>
-          <script>
-            google.charts.load('current', {packages: ['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
-          </script>
-          <div id="chart-container"></div>
-          <p>Enter how you like to spend time at school</p>
-          <form action="/voter-data" method="POST">
-            <input type="text" name="hobby">
-            <input type="Submit"/>
-          </form>
-        </div>
-      </div>
       <div class="rightcolumn">
         <div class="card">
           <h3>About Us</h3>
