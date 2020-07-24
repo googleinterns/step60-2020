@@ -81,3 +81,17 @@ function drawChart() {
     chart.draw(data, options);
   });
 }
+
+//Fetches image data
+
+function fetchBlobstoreUrlAndShowForm() {
+  fetch('/Serve')
+      .then((response) => {
+        return response.text();
+      })
+      .then((imageUploadUrl) => {
+        const messageForm = document.getElementById('my-form');
+        messageForm.action = imageUploadUrl;
+        messageForm.classList.remove('hidden');
+      });
+}
