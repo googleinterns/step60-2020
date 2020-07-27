@@ -43,6 +43,6 @@ public class VoteDataServlet extends HttpServlet {
     int currentVotes = votes.containsKey(hobby) ? votes.get(hobby) : 0;
     votes.put(hobby, currentVotes + 1);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/polls.html");
   }
 }
