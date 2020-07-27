@@ -130,3 +130,8 @@ h5 {
   clear: both;
   display: table;
 }
+
+h7 {
+    font-size: 30px;
+    font-style: normal;
+}
