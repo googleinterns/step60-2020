@@ -83,7 +83,7 @@ function drawChart() {
   });
 }
 
-/** Fetches vote data and uses it to create a chart. */
+/** Fetches vote data to make bar chart. */
 function drawStudyChart() {
   fetch('/study-data').then(response => response.json())
   .then((study_votes) => {
