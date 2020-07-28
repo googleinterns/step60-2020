@@ -58,26 +58,54 @@ function createBoldElement(text) {
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawStudyChart);
+
 
 /** Fetches vote data and uses it to create a chart. */
 function drawChart() {
   fetch('/voter-data').then(response => response.json())
-  .then((votes) => {
+  .then((study_votes) => {
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Hobby');
     data.addColumn('number', 'Votes');
-    Object.keys(votes).forEach((hobby) => {
-      data.addRow([hobby, votes[hobby]]);
+    Object.keys(study_votes).forEach((hobby) => {
+      data.addRow([hobby, study_votes[hobby]]);
     });
 
     const options = {
       'title': 'Ways College Students Spend Time',
-      'width':600,
-      'height':500
+      'width':450,
+      'height':450
     };
 
     const chart = new google.visualization.PieChart(
         document.getElementById('chart-container'));
+    chart.draw(data, options);
+  });
+}
+
+
+
+
+/** Fetches vote data and uses it to create a chart. */
+function drawStudyChart() {
+  fetch('/study-data').then(response => response.json())
+  .then((study_votes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Hobby');
+    data.addColumn('number', 'Votes');
+    Object.keys(study_votes).forEach((hours) => {
+      data.addRow([hours, study_votes[hours]]);
+    });
+
+    const options = {
+      'title': 'College Student Majors',
+      'width':450,
+      'height':450
+    };
+
+    const chart = new google.visualization.ColumnChart(
+        document.getElementById('vote-container'));
     chart.draw(data, options);
   });
 }
