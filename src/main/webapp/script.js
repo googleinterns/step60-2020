@@ -58,17 +58,17 @@ function createBoldElement(text) {
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(drawStudyChart);
+
 
 /** Fetches vote data and uses it to create a chart. */
 function drawChart() {
   fetch('/voter-data').then(response => response.json())
-  .then((study_votes) => {
+  .then((votes) => {
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Hobby');
     data.addColumn('number', 'Votes');
-    Object.keys(study_votes).forEach((hobby) => {
-      data.addRow([hobby, study_votes[hobby]]);
+    Object.keys(votes).forEach((hobby) => {
+      data.addRow([hobby, votes[hobby]]);
     });
 
     const options = {
@@ -101,7 +101,7 @@ function drawStudyChart() {
     };
 
     const chart = new google.visualization.ColumnChart(
-        document.getElementById('vote-container'));
+        document.getElementById('study-container'));
     chart.draw(data, options);
   });
 }
