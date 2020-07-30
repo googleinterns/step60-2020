@@ -7,8 +7,8 @@
     <script src="https://www.gstatic.com/charts/loader.js"></script>
           <script>
             google.charts.load('current', {packages: ['corechart']});
-            google.charts.setOnLoadCallback(drawStudyChart);
             google.charts.setOnLoadCallback(drawChart);
+            google.charts.setOnLoadCallback(drawStudyChart);
           </script>
   </head>
   <body onload="getComments();drawChart();drawStudyChart();">
@@ -27,19 +27,19 @@
       <h3>Student Data Graphs</h3>
       <div class="row">
         <div class="column">
-          <p>Here is what some people are currently studyinhg!</p>
-          <div id="vote-container"></div>
-          <p>Enter your major in college!</p>
-          <form action="/study-data" method="POST">
+          <p>Here are some ways students like to spend time!</p>
+          <div id="chart-container"></div>
+          <p>Enter how you like to spend time at school!</p>
+          <form action="/voter-data" method="POST">
             <input type="text" name="hobby">
             <input type="Submit"/>
           </form>
         </div>
         <div class="column">
-          <p>Here are some ways students spend time in school!</p>
-          <div id="chart-container"></div>
-          <p>Enter how you spend time at school!</p>
-          <form action="/voter-data" method="POST">
+          <p>Here is what students are currently studying!</p>
+          <div id="study-container"></div>
+          <p>Enter your major in college!</p>
+          <form action="/study-data" method="POST">
             <input type="text" name="hours">
             <input type="Submit"/>
           </form>
