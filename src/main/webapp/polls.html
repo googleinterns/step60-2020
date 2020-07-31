@@ -9,9 +9,10 @@
             google.charts.load('current', {packages: ['corechart']});
             google.charts.setOnLoadCallback(drawChart);
             google.charts.setOnLoadCallback(drawStudyChart);
+            google.charts.setOnLoadCallback(drawSleepChart);
           </script>
   </head>
-  <body onload="getComments();drawChart();drawStudyChart();">
+  <body onload="getComments();drawChart();drawStudyChart();drawSleepChart();">
     <div class="header">
       <h1>College Connect</h1>
       <h4>By college students, for college students</h4>
@@ -34,7 +35,7 @@
             <input type="text" name="hobby">
             <input type="Submit"/>
           </form>
-        </div>
+        </div>   
         <div class="column">
           <p>Here is what students are currently studying!</p>
           <div id="study-container"></div>
@@ -44,6 +45,15 @@
             <input type="Submit"/>
           </form>
         </div>
+        <div class="column">
+          <p>Here is how long students sleep on average!</p>
+          <div id="sleep-container"></div>
+          <p>Enter how many hours of sleep you get on an average weekday</p>
+          <form action="/sleep-data" method="POST">
+            <input type="text" name="time">
+            <input type="Submit"/>
+          </form>
+        </div> 
       </div>
     </div>
   </body>
