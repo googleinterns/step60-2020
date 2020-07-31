@@ -82,7 +82,6 @@ function drawChart() {
     chart.draw(data, options);
   });
 }
-
 /** Fetches vote data to make bar chart. */
 function drawStudyChart() {
   fetch('/study-data').then(response => response.json())
@@ -102,6 +101,29 @@ function drawStudyChart() {
 
     const chart = new google.visualization.ColumnChart(
         document.getElementById('study-container'));
+    chart.draw(data, options);
+  });
+}
+/** Fetches vote data to make donut chart. */
+function drawSleepChart() {
+  fetch('/sleep-data').then(response => response.json())
+  .then((sleep_votes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Hobby');
+    data.addColumn('number', 'Votes');
+    Object.keys(sleep_votes).forEach((time) => {
+      data.addRow([time, sleep_votes[time]]);
+    });
+
+    const options = {
+      'title': 'College Students Average Sleep Daily',
+      pieHole: 0.4,
+      'width':450,
+      'height':450
+    };
+
+    const chart = new google.visualization.PieChart(
+        document.getElementById('sleep-container'));
     chart.draw(data, options);
   });
 }
